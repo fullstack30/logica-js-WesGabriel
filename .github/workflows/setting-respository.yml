@@ -1,0 +1,40 @@
+name: Setting repository
+
+on: create
+
+jobs:
+  
+  setting:
+    name: "Settings"
+    if: github.ref_name == 'master'
+    runs-on: ubuntu-latest
+    env:
+      KMP_SETTING_REPOSITORY: "${{ github.workspace }}/.github/setting-respository"
+      GITHUB_TOKEN: ${{ secrets.GHT }}
+
+    steps:
+      
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Export commit
+        run: | 
+          export KMP_INITIAL_COMMIT=$(git rev-list --max-parents=0 HEAD)
+          export KMP_CURRENT_COMMIT=$(git log --format="%H" -n 1 $GITHUB_SHA)
+          
+      - name: Branch protection
+        run: |
+          if [ "$KMP_CURRENT_COMMIT" == "$KMP_INITIAL_COMMIT" ]; then
+            node $KMP_SETTING_REPOSITORY/branch-protection.js
+          fi
+      
+      - name: Create issues
+        run: |
+          if [ "$KMP_CURRENT_COMMIT" == "$KMP_INITIAL_COMMIT" ]; then
+            node $KMP_SETTING_REPOSITORY/create-issues.js
+          fi
+          
+      
+    

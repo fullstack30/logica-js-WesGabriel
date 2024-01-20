@@ -8,7 +8,7 @@ Requisitos
         O argumento não for do tipo inteiro
 */
 function soma_impar(numero){
-    if(typeof numero !== "number" || numero<=0 || numero % 1 !== 0){
+    if(typeof numero !== "number" || numero % 1 !== 0 || numero<0){
         return 'Função aceita apenas números inteiros positivos.'
     }
 
@@ -20,4 +20,4 @@ function soma_impar(numero){
     return soma;
 }
 
-console.log(soma_impar(65));
+console.log(soma_impar(0));

@@ -20,6 +20,6 @@ function inverter_lista(array){
 
 // let lista_test = undefined;
 
-// let lista = ['a', 'b', 'c', 'd'];
+let lista = ['a', 'b', 'c', 'd'];
 
-console.log(inverter_lista());
+console.log(inverter_lista(lista));

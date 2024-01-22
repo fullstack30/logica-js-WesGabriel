@@ -9,7 +9,7 @@ Requisitos
         O argumento passado não for do tipo array
 */
 
-function inverter_lista(array){
+function inverte_lista(array){
     if(!Array.isArray(array)){
         return 'Argumento inválido. Função espera receber um array como argumento.'
     }else{
@@ -20,4 +20,4 @@ function inverter_lista(array){
 
 let lista = ['a', 'b', 'c', 'd'];
 
-console.log(inverter_lista(lista));
+console.log(inverte_lista(lista));

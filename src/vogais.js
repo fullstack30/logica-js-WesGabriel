@@ -18,7 +18,7 @@ function vogais(texto){
 
     for (let i = 0; i <= texto.length; i++) {
         const vogal = texto[i];
-        if("aeiou".includes(vogal)){
+        if("aeiouAEIOU".includes(vogal)){
             contantoAsVogais++;
         }
     }

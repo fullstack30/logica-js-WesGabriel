@@ -18,14 +18,14 @@ function vogais(texto){
 
     for (let i = 0; i <= texto.length; i++) {
         const vogal = texto[i];
-        if("aeiou".includes(vogal) || "AEIOU".includes(vogal)){
+        if("aeiouáéíóúãõâêîôûàèìòùäëïöü".includes(vogal) || "AEIOU".includes(vogal)){
             contantoAsVogais++;
         }
     }
     return contantoAsVogais;    
 }
 
-let teste = 'Eae Collegers!'
+let teste = 'pneumoultramicroscopicsilicovulcanoconiotico'
 const result= vogais(teste);
 
 console.log(result);

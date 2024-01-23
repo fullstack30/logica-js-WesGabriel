@@ -22,10 +22,10 @@ function vogais(texto){
             contantoAsVogais++;
         }
     }
-    return `Foram encontradas ${contantoAsVogais} vogais neste texto`;    
+    return contantoAsVogais;    
 }
 
-let teste = 'O texto passou com sucesso!'
+let teste = 'Eae Collegers!'
 const result= vogais(teste);
 
 console.log(result);

@@ -18,14 +18,14 @@ function vogais(texto){
 
     for (let i = 0; i <= texto.length; i++) {
         const vogal = texto[i];
-        if("aeiouáéíóúãõâêîôûàèìòùäëïöü".includes(vogal) || "AEIOU".includes(vogal)){
+        if("aeiouáéíóúãõâêîôûàèìòùäëïöüç".includes(vogal) || "AEIOU".includes(vogal)){
             contantoAsVogais++;
         }
     }
     return contantoAsVogais;    
 }
 
-let teste = 'pneumoultramicroscopicsilicovulcanoconiotico'
+let teste = 'Vogais e suas variações: uiaáâàãçéêèíìóôòõúûùeo'
 const result= vogais(teste);
 
 console.log(result);

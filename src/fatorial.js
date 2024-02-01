@@ -10,15 +10,20 @@ Requisitos:
     - A função receber um valor não numérico
 */
 function fatorial(n) {
-  if (typeof n !== "number" || n <= 0 || Number.isInteger(n) == false) {
-    return "Função deve receber um argumento do tipo inteiro positivo.";
+  if (!Number.isInteger(n) || n < 0) {
+    if (typeof n === "string") {
+      Number(n);
+    } else {
+      return "Função deve receber um argumento do tipo inteiro positivo.";
+    }
   }
 
   let numero = 1;
   for (let number = 2; number <= n; number++) {
     numero *= number;
   }
+
   return numero;
 }
 
-console.log(fatorial());
+//console.log(fatorial(6));

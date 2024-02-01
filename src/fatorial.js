@@ -18,12 +18,17 @@ function fatorial(n) {
     }
   }
 
-  let numero = 1;
-  for (let number = 2; number <= n; number++) {
-    numero *= number;
+  let resultado = 1;
+
+  for (n; n > 0; n--) {
+    resultado *= n;
   }
 
-  return numero;
+  if (typeof n === "string") {
+    return "Função deve receber um argumento do tipo inteiro positivo.";
+  }
+
+  return resultado;
 }
 
-//console.log(fatorial(6));
+// console.log(fatorial("texto"));

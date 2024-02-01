@@ -10,11 +10,7 @@ Requisitos:
     - A função receber um valor não numérico
 */
 function fatorial(n) {
-  if (Number.isInteger(n) == false) {
-    return "Função deve receber um argumento do tipo inteiro positivo.";
-  }
-
-  if (n <= 0) {
+  if (typeof n !== "number" || n <= 0 || Number.isInteger(n) == false) {
     return "Função deve receber um argumento do tipo inteiro positivo.";
   }
 

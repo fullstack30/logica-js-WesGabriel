@@ -15,9 +15,10 @@ apenas_par = (n) => {
   }
 
   let nEven = [];
-  let direction = n < 0 ? -2 : 2;
-  for (let nPar = n; nPar >= 0; nPar -= direction) {
-    nEven.push(nPar);
+  for (let nPar = n; nPar >= 0; nPar -= 2) {
+    if (nPar % 2 === 0) {
+      nEven.push(nPar);
+    }
   }
   return nEven;
 };

@@ -26,10 +26,3 @@ apenas_par = (n) => {
   }
   return nEven;
 };
-
-console.log(apenas_par(5.3) + " teste 1");
-console.log(apenas_par() + " teste 2");
-console.log(apenas_par("teste") + " teste 3");
-console.log(apenas_par(-5.3) + " teste 4");
-console.log(apenas_par(-50) + " teste 5");
-console.log(apenas_par(50) + " teste 6");

@@ -10,7 +10,7 @@ Requisitos:
 */
 
 apenas_par = (n) => {
-  if (typeof n === "number" && !Number.isInteger(n)) {
+  if (typeof n !== "number" && !Number.isInteger(n)) {
     return "Função aceita apenas números inteiros.";
   }
 
@@ -20,8 +20,14 @@ apenas_par = (n) => {
       nEven.push(nPar);
     }
   }
+  for (let nPar = n; nPar <= 0; nPar += 2) {
+    if (nPar % 2 === 0) {
+      nEven.push(nPar);
+    }
+  }
   return nEven;
 };
 
-// console.log(apenas_par(10));
-// console.log(apenas_par(-10));
+console.log(apenas_par(10));
+console.log(apenas_par(-5));
+console.log(apenas_par());

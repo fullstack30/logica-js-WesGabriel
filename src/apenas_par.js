@@ -28,6 +28,6 @@ apenas_par = (n) => {
   return nEven;
 };
 
-console.log(apenas_par(10));
-console.log(apenas_par(-5));
-console.log(apenas_par());
+// console.log(apenas_par(10));
+// console.log(apenas_par(-5));
+// console.log(apenas_par());

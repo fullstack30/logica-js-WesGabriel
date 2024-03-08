@@ -15,14 +15,12 @@ apenas_par = (n) => {
   }
 
   let nEven = [];
-  let metrica =
-    n >= 0
-      ? Math.min(0, n % 2 === 0 ? n : n - 1)
-      : Math.max(0, n % 2 === 0 ? n : n + 1);
-  for (let nPar = metrica; nPar <= n; nPar += 2) {
-    if (nPar % 2 === 0) {
-      nEven.push(nPar);
-    }
+  let direction = n < 0 ? -2 : 2;
+  for (let nPar = n; nPar >= 0; nPar -= direction) {
+    nEven.push(nPar);
   }
   return nEven;
 };
+
+console.log(apenas_par(10));
+console.log(apenas_par(-10));
